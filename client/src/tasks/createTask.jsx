@@ -8,7 +8,7 @@ export default function CreateTask({ setTasks, setLoading, setError, error }) {
     const title = formData.get("title");
     const desc = formData.get("desc");
     try {
-      const res = await fetch("http://localhost:3003/api/task", {
+      const res = await fetch("https://hawlahayga-api.onrender.com/api/task", {
         method: "post",
         headers: {
           "Content-Type": "application/json",

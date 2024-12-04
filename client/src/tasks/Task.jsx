@@ -37,12 +37,15 @@ export default function Task({
     console.log(taskId);
 
     try {
-      const res = await fetch(`http://localhost:3003/api/task/${taskId}`, {
-        method: "delete",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const res = await fetch(
+        `https://hawlahayga-api.onrender.com/api/task/${taskId}`,
+        {
+          method: "delete",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       if (!res.ok) {
         const dataError = await res.json();
