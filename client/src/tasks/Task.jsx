@@ -10,7 +10,7 @@ export default function Task({
 }) {
   const fetchTasks = async () => {
     try {
-      const res = await fetch("http://localhost:3003/api/task");
+      const res = await fetch("https://hawlahayga-api.onrender.com/api/task");
 
       if (!res.ok) {
         const dataError = await res.json();
@@ -84,7 +84,7 @@ export default function Task({
                   onClick={() => handleDelate(task._id)}
                   className="bg-red-500 py-2 mt-3 mb-2 px-3 rounded-md"
                 >
-                  Delete
+                  {loading ? " Delete" : "  Deleting"}
                 </button>
               </div>
             ))}

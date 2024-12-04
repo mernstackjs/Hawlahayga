@@ -1,4 +1,10 @@
-export default function CreateTask({ setTasks, setLoading, setError, error }) {
+export default function CreateTask({
+  setTasks,
+  setLoading,
+  setError,
+  error,
+  loading,
+}) {
   setTimeout(() => {
     setError("");
   }, 2000);
@@ -55,7 +61,7 @@ export default function CreateTask({ setTasks, setLoading, setError, error }) {
           type="submit"
           className="p-3 bg-blue-700 text-white text-lg rounded-md"
         >
-          Create Task
+          {loading ? "loading" : " Create Task"}
         </button>
       </form>
     </div>

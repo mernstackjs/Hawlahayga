@@ -13,6 +13,7 @@ export default function App() {
           setError={setError}
           setTasks={setTasks}
           setLoading={setLoading}
+          loading={loading}
           error={error}
         />
         <Task
